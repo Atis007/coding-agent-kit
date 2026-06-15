@@ -2,7 +2,7 @@
 
 Modular configuration files for [Claude Code](https://docs.anthropic.com/en/docs/claude-code). Two operational modes, stack-specific standards, and project scaffolding templates.
 
-Ships with React, React Native, PHP, and Express. Designed to grow — add any stack by dropping in two files.
+Ships with React, React Native, PHP, Express, Go, Java, C, and C#. Designed to grow — add any stack by dropping in two files.
 
 Works alongside the [Karpathy behavioral guidelines](https://github.com/multica-ai/andrej-karpathy-skills) plugin.
 
@@ -29,12 +29,20 @@ A kit of files you assemble per project to control how Claude Code works with yo
 │   ├── code-standards-react.md
 │   ├── code-standards-rn.md
 │   ├── code-standards-php.md
-│   └── code-standards-express.md
+│   ├── code-standards-express.md
+│   ├── code-standards-go.md
+│   ├── code-standards-java.md
+│   ├── code-standards-c.md
+│   └── code-standards-csharp.md
 └── architecture/                  ← Stack starters, pick + customize
     ├── architecture-react.md
     ├── architecture-rn.md
     ├── architecture-php.md
-    └── architecture-express.md
+    ├── architecture-express.md
+    ├── architecture-go.md
+    ├── architecture-java.md
+    ├── architecture-c.md
+    └── architecture-csharp.md
 ```
 
 **Templates** are language-agnostic — same files for every project, filled in with your specifics.
@@ -104,11 +112,51 @@ context/
 └── progress-tracker.md
 ```
 
+**Go (backend / systems)**
+```
+context/
+├── project-overview.md
+├── architecture.md              ← from architecture-go.md
+├── code-standards-go.md
+├── ai-workflow-rules.md
+└── progress-tracker.md
+```
+
+**Java (backend)**
+```
+context/
+├── project-overview.md
+├── architecture.md              ← from architecture-java.md
+├── code-standards-java.md
+├── ai-workflow-rules.md
+└── progress-tracker.md
+```
+
+**C (systems)**
+```
+context/
+├── project-overview.md
+├── architecture.md              ← from architecture-c.md
+├── code-standards-c.md
+├── ai-workflow-rules.md
+└── progress-tracker.md
+```
+
+**C# / .NET (backend)**
+```
+context/
+├── project-overview.md
+├── architecture.md              ← from architecture-csharp.md
+├── code-standards-csharp.md
+├── ai-workflow-rules.md
+└── progress-tracker.md
+```
+
 **Full-stack:** Combine frontend and backend files. Use one `architecture.md` covering both layers, or split into two and reference both in `CLAUDE.md`.
 
 ## Adding a New Stack
 
-The kit grows with you. To add Go, Java, Python, Rust, or anything else:
+The kit grows with you. To add Python, Rust, Swift, or anything else:
 
 1. Create `standards/code-standards-{stack}.md` — your coding conventions for that stack
 2. Create `architecture/architecture-{stack}.md` — typical system structure and boundaries
